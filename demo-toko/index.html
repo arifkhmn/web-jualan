@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GANTI NOMOR: cari ganti 6289637885476 dengan nomor WA asli -->
+    <title>LOKAL · Fashion &amp; Aksesoris Bandung</title>
+    <meta name="description" content="LOKAL, toko fashion dan aksesoris Bandung. Kemeja, kaos, sneakers, tas, dan jam. Pesan lewat WhatsApp, kirim ke seluruh Indonesia.">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LOKAL · Fashion &amp; Aksesoris Bandung">
+    <meta property="og:description" content="LOKAL, toko fashion dan aksesoris Bandung. Kemeja, kaos, sneakers, tas, dan jam. Pesan lewat WhatsApp, kirim ke seluruh Indonesia.">
+    <meta property="og:image" content="https://cdn.stocksnap.io/img-thumbs/960w/ZN97ZIF3ZU.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LOKAL · Fashion &amp; Aksesoris Bandung">
+    <meta name="twitter:description" content="LOKAL, toko fashion dan aksesoris Bandung. Kemeja, kaos, sneakers, tas, dan jam. Pesan lewat WhatsApp, kirim ke seluruh Indonesia.">
+    <meta name="twitter:image" content="https://cdn.stocksnap.io/img-thumbs/960w/ZN97ZIF3ZU.jpg">
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="%231d4ed8"/><path d="M8 24 16 7l8 17h-4.2L16 15.5 12.2 24z" fill="white"/></svg>'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* brand LOKAL: light terkunci, cobalt + netral dingin */
+        :root {
+            --bg: #ffffff;
+            --surface: #f6f7f9;
+            --ink: #111318;
+            --muted: #5c6270;
+            --line: #e3e6ec;
+            --accent: #1d4ed8;
+            --accent-hover: #1e40af;
+            --soft: #eff3ff;
+            --font: 'Space Grotesk', system-ui, sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+            --ease: cubic-bezier(.16,1,.3,1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; color-scheme: light; }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; }
+        .wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            font: 600 15px/1 var(--font); padding: 15px 28px; border-radius: 999px;
+            border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+            transition: transform .15s var(--ease), background .2s, border-color .2s;
+        }
+        .btn:active { transform: scale(.97); }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
+        .btn-ghost:hover { border-color: var(--ink); }
+        .btn-sm { padding: 11px 20px; font-size: 14px; }
+        .btn-block { width: 100%; }
+
+        nav { position: sticky; top: 0; z-index: 50; height: 64px; background: var(--bg); border-bottom: 1px solid var(--line); color-scheme: light; }
+        .nav-in { display: flex; align-items: center; gap: 28px; height: 64px; }
+        .brand { font-weight: 700; font-size: 19px; letter-spacing: .14em; }
+        .brand span { color: var(--accent); }
+        .nav-links { display: flex; gap: 24px; margin-left: auto; font-size: 15px; color: var(--muted); }
+        .nav-links a:hover { color: var(--ink); }
+        .cart-btn {
+            position: relative; background: var(--ink); color: #fff; border: 0;
+            font: 600 14px/1 var(--font); padding: 12px 22px; border-radius: 999px; cursor: pointer;
+            transition: transform .15s var(--ease);
+        }
+        .cart-btn:active { transform: scale(.97); }
+        .cart-count {
+            position: absolute; top: -7px; right: -7px; min-width: 21px; height: 21px;
+            background: var(--accent); color: #fff; border-radius: 999px;
+            font: 700 12px/21px var(--mono); text-align: center; padding: 0 5px;
+            transform: scale(0); transition: transform .2s var(--ease);
+        }
+        .cart-count.on { transform: scale(1); }
+
+        /* banner: foto penuh + panel solid, tanpa gradasi */
+        .banner { position: relative; margin-top: 26px; }
+        .banner img { width: 100%; height: clamp(340px, 52vh, 480px); object-fit: cover; border-radius: 16px; }
+        .banner-panel {
+            position: absolute; left: clamp(16px, 4vw, 48px); bottom: clamp(16px, 4vw, 48px);
+            max-width: min(540px, 88%); background: var(--ink); color: #fff;
+            border-radius: 16px; padding: clamp(24px, 4vw, 40px);
+        }
+        .banner-panel .eyebrow { font: 700 12px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: #93b4ff; margin-bottom: 14px; }
+        .banner-panel h1 { font-size: clamp(30px, 4.4vw, 48px); font-weight: 700; line-height: 1.02; letter-spacing: -.03em; }
+        .banner-panel p { margin-top: 12px; font-size: 16.5px; color: rgba(255,255,255,.82); }
+        .banner-panel .btn { margin-top: 24px; }
+
+        section { padding: 76px 0; }
+        .head-row { display: flex; justify-content: space-between; gap: 24px; align-items: baseline; flex-wrap: wrap; }
+        h2 { font-size: clamp(26px, 3.4vw, 40px); font-weight: 700; letter-spacing: -.02em; }
+        .head-row p { color: var(--muted); font-size: 15px; }
+
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 40px; }
+        .card { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .25s; }
+        .card:hover { border-color: var(--ink); }
+        .card-img { overflow: hidden; background: var(--surface); }
+        .card img { width: 100%; aspect-ratio: 4/3.4; object-fit: cover; transition: transform .5s var(--ease); }
+        .card:hover img { transform: scale(1.04); }
+        .card-body { padding: 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+        .card h3 { font-size: 17px; font-weight: 700; }
+        .card .price { font: 700 17px/1 var(--mono); color: var(--accent); margin-top: 2px; }
+        .card .size { font-size: 13.5px; color: var(--muted); flex: 1; }
+        .card .btn { margin-top: 14px; }
+
+        .strip { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 56px 0; }
+        .strip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .strip-item h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+        .strip-item h3::before { content: ""; display: inline-block; width: 9px; height: 9px; background: var(--accent); border-radius: 2px; margin-right: 10px; }
+        .strip-item p { color: var(--muted); font-size: 14.5px; }
+
+        footer { padding: 48px 0; }
+        .foot-in { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: 14.5px; }
+
+        /* keranjang: panel kanan + overlay */
+        .overlay { position: fixed; inset: 0; background: rgba(10,12,18,.45); opacity: 0; pointer-events: none; transition: opacity .3s var(--ease); z-index: 80; }
+        .overlay.on { opacity: 1; pointer-events: auto; }
+        .drawer {
+            position: fixed; top: 0; right: 0; bottom: 0; width: min(420px, 100%); z-index: 90;
+            background: var(--bg); border-left: 1px solid var(--line); display: flex; flex-direction: column;
+            transform: translateX(100%); transition: transform .35s var(--ease);
+        }
+        .drawer.on { transform: none; }
+        .drawer-head { display: flex; justify-content: space-between; align-items: center; padding: 22px 24px; border-bottom: 1px solid var(--line); }
+        .drawer-head h2 { font-size: 20px; }
+        .drawer-close { background: none; border: 0; font-size: 26px; line-height: 1; cursor: pointer; color: var(--muted); padding: 4px 8px; }
+        .drawer-body { flex: 1; overflow-y: auto; padding: 8px 24px; }
+        .empty { color: var(--muted); text-align: center; padding: 56px 0; font-size: 15px; }
+        .ci { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); align-items: center; }
+        .ci img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; background: var(--surface); }
+        .ci h4 { font-size: 15px; font-weight: 700; }
+        .ci .price { font: 500 13.5px/1 var(--mono); color: var(--muted); margin-top: 3px; }
+        .qty { display: inline-flex; align-items: center; gap: 4px; border: 1px solid var(--line); border-radius: 999px; padding: 4px; margin-top: 8px; }
+        .qty button { width: 26px; height: 26px; border: 0; background: var(--surface); border-radius: 50%; font: 700 15px/1 var(--font); cursor: pointer; color: var(--ink); }
+        .qty span { font: 700 14px/1 var(--mono); min-width: 22px; text-align: center; }
+        .ci-sub { font: 700 14.5px/1 var(--mono); }
+        .drawer-foot { padding: 20px 24px calc(20px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); display: grid; gap: 14px; }
+        .total-row { display: flex; justify-content: space-between; align-items: baseline; }
+        .total-row span { color: var(--muted); font-size: 15px; }
+        .total-row strong { font: 700 22px/1 var(--mono); }
+
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+        .reveal.in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .drawer, .overlay, .card img { transition: none; }
+        }
+        @media (max-width: 900px) {
+            .grid, .strip-grid { grid-template-columns: 1fr 1fr; }
+            .nav-links { display: none; }
+            section { padding: 56px 0; }
+            .banner-panel { position: static; max-width: none; margin: -56px 16px 0; }
+        }
+        @media (max-width: 560px) {
+            .grid, .strip-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="wrap nav-in">
+        <a class="brand" href="#">LOK<span>AL</span></a>
+        <div class="nav-links">
+            <a href="#produk">Produk</a>
+            <a href="#info">Info Toko</a>
+        </div>
+        <button class="cart-btn" style="margin-left:auto" onclick="openCart()" aria-label="Buka keranjang">
+            Keranjang <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </div>
+</nav>
+
+<header class="wrap banner reveal">
+    <img src="https://cdn.stocksnap.io/img-thumbs/960w/ZN97ZIF3ZU.jpg" alt="Koleksi LOKAL" width="960" height="640">
+    <div class="banner-panel">
+        <div class="eyebrow">Fashion &amp; Aksesoris · Bandung</div>
+        <h1>Gaya lokal, kirim ke mana aja.</h1>
+        <p>Kemeja, kaos, sneakers, sampai aksesoris. Pilih, masukin keranjang, order langsung masuk ke WhatsApp kami.</p>
+        <a class="btn btn-primary" href="#produk">Belanja sekarang</a>
+    </div>
+</header>
+
+<section id="produk">
+    <div class="wrap">
+        <div class="head-row reveal">
+            <h2>Produk pilihan.</h2>
+            <p>Stok siap kirim, gratis ongkir se-Jawa Barat.</p>
+        </div>
+        <div class="grid" id="productGrid"></div>
+    </div>
+</section>
+
+<div class="strip" id="info">
+    <div class="wrap strip-grid">
+        <div class="strip-item reveal">
+            <h3>Order lewat WhatsApp</h3>
+            <p>Isi keranjang, tekan pesan, dan orderan lu langsung masuk ke HP kami. Balasan rata-rata di bawah 10 menit.</p>
+        </div>
+        <div class="strip-item reveal">
+            <h3>Bisa cod Bandung</h3>
+            <p>Ketemu di alamat toko atau titik ojol, barang dicek dulu sebelum bayar.</p>
+        </div>
+        <div class="strip-item reveal">
+            <h3>Tukar ukuran gratis</h3>
+            <p>Kurang pas? Tukar dalam 7 hari selama label belum dilepas, tanpa biaya tambahan.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="wrap foot-in">
+        <span class="brand" style="color:var(--ink)">LOK<span>AL</span></span>
+        <span>Jl. Cihampelas No. 88, Bandung · Setiap hari 10.00 sampai 21.00</span>
+        <span>© 2026 LOKAL</span>
+    </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer" aria-label="Keranjang belanja">
+    <div class="drawer-head">
+        <h2>Keranjang</h2>
+        <button class="drawer-close" onclick="closeCart()" aria-label="Tutup keranjang">&times;</button>
+    </div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot">
+        <div class="total-row"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+        <button class="btn btn-primary btn-block" onclick="checkout()">Pesan via WhatsApp</button>
+    </div>
+</aside>
+
+<script>
+    // ponytail: cart in-memory, cukup buat demo. refresh = reset.
+    const PHONE = '6289637885476'; // GANTI: nomor WA toko
+    const rp = n => 'Rp' + n.toLocaleString('id-ID');
+
+    const products = [
+        { id: 1, name: 'Kemeja Plaid Lengan Panjang', price: 145000, size: 'Ukuran M sampai XL, katun twill', img: 'https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp' },
+        { id: 2, name: 'Kaos Graphic Hitam',          price: 95000,  size: 'Katun combed 30s, sablon plastisol', img: 'https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/1.webp' },
+        { id: 3, name: 'Sneakers High Merah Hitam',   price: 385000, size: 'Ukuran 40 sampai 45, sol karet', img: 'https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp' },
+        { id: 4, name: 'Tas Kulit Cokelat',           price: 235000, size: 'Kulit asli, tali bisa disetel', img: "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/1.webp" },
+        { id: 5, name: 'Kacamata Hitam',              price: 120000, size: 'Lensa UV400, frame ringan', img: 'https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/1.webp' },
+        { id: 6, name: 'Jam Kulit Cokelat',           price: 175000, size: 'Tali kulit, tahan air 3ATM', img: 'https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/1.webp' },
+    ];
+    const cart = new Map();
+
+    function renderProducts() {
+        document.getElementById('productGrid').innerHTML = products.map(p => `
+            <div class="card reveal">
+                <div class="card-img"><img src="${p.img}" alt="${p.name}" width="600" height="510" loading="lazy"></div>
+                <div class="card-body">
+                    <h3>${p.name}</h3>
+                    <span class="price">${rp(p.price)}</span>
+                    <span class="size">${p.size}</span>
+                    <button class="btn btn-primary btn-sm" onclick="addToCart(${p.id})">Masukin keranjang</button>
+                </div>
+            </div>`).join('');
+        observeReveals();
+    }
+
+    function addToCart(id) {
+        cart.set(id, (cart.get(id) || 0) + 1);
+        renderCart();
+        openCart();
+    }
+    function changeQty(id, d) {
+        const q = (cart.get(id) || 0) + d;
+        q <= 0 ? cart.delete(id) : cart.set(id, q);
+        renderCart();
+    }
+    function renderCart() {
+        let total = 0, count = 0;
+        for (const [id, q] of cart) { total += products.find(p => p.id === id).price * q; count += q; }
+        const badge = document.getElementById('cartCount');
+        badge.textContent = count;
+        badge.classList.toggle('on', count > 0);
+        document.getElementById('cartTotal').textContent = rp(total);
+        document.getElementById('cartBody').innerHTML = count === 0
+            ? '<p class="empty">Keranjang masih kosong.<br>Pilih produk dulu ya.</p>'
+            : [...cart].map(([id, q]) => {
+                const p = products.find(x => x.id === id);
+                return `<div class="ci">
+                    <img src="${p.img}" alt="${p.name}">
+                    <div>
+                        <h4>${p.name}</h4>
+                        <div class="price">${rp(p.price)}</div>
+                        <div class="qty">
+                            <button onclick="changeQty(${id}, -1)" aria-label="Kurangi">−</button>
+                            <span>${q}</span>
+                            <button onclick="changeQty(${id}, 1)" aria-label="Tambah">+</button>
+                        </div>
+                    </div>
+                    <span class="ci-sub">${rp(p.price * q)}</span>
+                </div>`;
+            }).join('');
+    }
+    function checkout() {
+        if (cart.size === 0) { openCart(); return; }
+        let total = 0;
+        const lines = [...cart].map(([id, q]) => {
+            const p = products.find(x => x.id === id);
+            total += p.price * q;
+            return `- ${p.name} x${q} = ${rp(p.price * q)}`;
+        });
+        const msg = `Halo LOKAL, saya mau pesan:\n${lines.join('\n')}\nTotal: ${rp(total)}\n\nNama:\nAlamat kirim:`;
+        window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+    function openCart() { document.getElementById('drawer').classList.add('on'); document.getElementById('overlay').classList.add('on'); }
+    function closeCart() { document.getElementById('drawer').classList.remove('on'); document.getElementById('overlay').classList.remove('on'); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+
+    let io;
+    function observeReveals() {
+        if (!io) io = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+    }
+    renderProducts();
+    renderCart();
+    observeReveals();
+</script>
+
+</body>
+</html>
